@@ -99,7 +99,7 @@ static int32_t e8e9_flush(struct e8e9 * s) {
 
 int main(int argc, char * argv[]) {
     if(argc != 2) {
-        fprintf("e8e9: argument expected.");
+        fprintf(stderr, "e8e9: argument expected.\n");
         exit(1);
     }
 
@@ -120,7 +120,7 @@ int main(int argc, char * argv[]) {
         while ((c = e8e9_flush(&s)) >= 0)
             putchar(c);
     } else {
-        fprintf("usage:\ne8e9 e|d < input > output\n");
+        fprintf(stderr, "usage:\ne8e9 e|d < input > output\n");
         exit(1);
     }
 }
