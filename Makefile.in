@@ -278,7 +278,6 @@ top_build_prefix = @top_build_prefix@
 top_builddir = @top_builddir@
 top_srcdir = @top_srcdir@
 ACLOCAL_AMFLAGS = -I build-aux
-AM_LDFLAGS = -avoid-version
 e8e9_CFLAGS = $(AM_CFLAGS)
 e8e9_SOURCES = e8e9.c
 all: all-am

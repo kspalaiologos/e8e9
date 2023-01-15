@@ -50,3 +50,13 @@ modules.order
 Module.symvers
 Mkfile.old
 dkms.conf
+
+.deps/
+
+config.log
+
+config.status
+
+e8e9
+
+Makefile
