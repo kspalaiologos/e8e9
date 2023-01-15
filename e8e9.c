@@ -103,24 +103,22 @@ int main(int argc, char * argv[]) {
         exit(1);
     }
 
+    struct e8e9 s = e8e9_init();
+    int c, n;
+
     if(argv[1][0] == 'e') {
-        struct e8e9 s = e8e9_init();
-        int c, n;
         while((c = getchar()) != EOF)
             if((n = e8e9_fb(&s, c)) >= 0)
                 putchar(n);
-        while ((c = e8e9_flush(&s)) >= 0)
-            putchar(c);
     } else if(argv[1][0] == 'd') {
-        struct e8e9 s = e8e9_init();
-        int c, n;
         while((c = getchar()) != EOF)
             if((n = e8e9_bb(&s, c)) >= 0)
                 putchar(n);
-        while ((c = e8e9_flush(&s)) >= 0)
-            putchar(c);
     } else {
         fprintf(stderr, "usage:\ne8e9 e|d < input > output\n");
         exit(1);
     }
+
+    while ((c = e8e9_flush(&s)) >= 0)
+        putchar(c);
 }
